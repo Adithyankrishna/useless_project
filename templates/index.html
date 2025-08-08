@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐛 Deliberate Bug Injector Web</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles
+    .css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🐛 Deliberate Bug Injector</h1>
+            <p>Transform your perfect code into delightfully chaotic masterpieces! 🎭</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Input Section -->
+            <div class="input-section">
+                <div class="section-header">
+                    <h2>📝 Your Perfect Code</h2>
+                    <div class="upload-section">
+                        <label for="file-upload" class="upload-btn">
+                            📁 Upload .py File
+                        </label>
+                        <input type="file" id="file-upload" accept=".py" style="display: none;">
+                    </div>
+                </div>
+                
+                <textarea id="code-input" placeholder="# Paste your Python code here...
+# For example:
+def greet(name):
+    return f'Hello, {name}!'
+
+print(greet('World'))"></textarea>
+                
+                <div class="controls">
+                    <div class="chaos-control">
+                        <label for="chaos-level">🎚️ Chaos Level: <span id="chaos-value">5</span></label>
+                        <input type="range" id="chaos-level" min="1" max="10" value="5">
+                        <div class="chaos-labels">
+                            <span>Gentle 😇</span>
+                            <span>Moderate 😈</span>
+                            <span>CHAOS 🔥</span>
+                        </div>
+                    </div>
+                    
+                    <button id="inject-btn" class="inject-btn">
+                        🔬 Inject Bugs!
+                    </button>
+                </div>
+            </div>
+
+            <!-- Output Section -->
+            <div class="output-section" id="output-section" style="display: none;">
+                <div class="section-header">
+                    <h2>🎭 Your Beautifully Broken Code</h2>
+                    <div class="results-info">
+                        <span id="bug-count" class="bug-count"></span>
+                        <span id="chaos-info" class="chaos-info"></span>
+                    </div>
+                </div>
+                
+                <div class="code-output">
+                    <div class="code-header">
+                        <span>🐛 Buggy Code</span>
+                        <button id="copy-btn" class="copy-btn">📋 Copy</button>
+                    </div>
+                    <pre><code id="buggy-code" class="language-python"></code></pre>
+                </div>
+                
+                <div class="bug-report">
+                    <h3>📋 Bug Report</h3>
+                    <ul id="bug-list"></ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading Animation -->
+        <div id="loading" class="loading" style="display: none;">
+            <div class="loading-spinner"></div>
+            <p>🔬 Injecting delicious bugs...</p>
+        </div>
+
+        <!-- Error Display -->
+        <div id="error-display" class="error" style="display: none;">
+            <h3>❌ Oops!</h3>
+            <p id="error-message"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Made with ❤️ and lots of intentional bugs | 
+           <a href="https://github.com" target="_blank">🐙 View on GitHub</a>
+        </p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
