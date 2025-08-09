@@ -118,4 +118,4 @@ https://github.com/user-attachments/assets/1509c1f5-4bb2-48da-a4e3-ef415bc15205
 
 ---
 
-If you want, I can **set up a GitHub folder structure** so that when you add screenshots or your video, they will **auto-display in this README** without you having to edit the file again. That way, you just upload and push — and it appears.
+
